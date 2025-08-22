@@ -9,3 +9,13 @@ jobs:
     steps:
       - name: Pull Code
         uses: actions/checkout@v5
+      - name: Print Current Directory
+        run: pwd
+      - name: List Files in Directory
+        run: ls
+      - name: Check Dotnet CLI
+        run: dotnet build
+      - name: List Files in Directory
+        run: ls RepoFi.Api/ -R
+      - name: Check NPM CLI
+        run: npm -v
