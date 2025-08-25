@@ -1,4 +1,5 @@
 import axios from "axios";
+import TipTapEditor from "@/components/tiptap-editor";
 
 export async function getMessage(): Promise<string> {
     return await axios.get("http://localhost:5000/api/home")
@@ -10,6 +11,6 @@ export default async function Home() {
     const text = await getMessage();
         
     return (
-        <>{text}</>
+        <TipTapEditor/>
     );
 }
